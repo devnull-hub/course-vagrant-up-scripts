@@ -26,10 +26,9 @@ sudo service mysqld start
 mysql -u root -e "SHOW DATABASES";
 
 # Download Starter Content
-
-sudo service httpd restart
-
 sudo cd /vagrant
 
 sudo -u vagrant wget -q https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/master/files/index.html?token=AS4YMV
 sudo -u vagrant wget -q https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/master/files/info.php?token=AS4YMV5AP37MA4B567SWQ6TAZJME2
+
+sudo service httpd restart
