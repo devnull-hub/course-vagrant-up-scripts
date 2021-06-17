@@ -6,7 +6,7 @@ sudo mv CentOS-Base.repo CentOS-Base.repo.old
 sudo wget -q https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/main/files/CentOS-Base.repo
 sudo yum clean all
 sudo yum update -y --exclude=kernel
-sudo yum install -y yim git unzip screen
+sudo yum install -y vim git unzip screen
 
 #Apache 
 sudo yum install -y httpd httpd-devel httpd-tools
