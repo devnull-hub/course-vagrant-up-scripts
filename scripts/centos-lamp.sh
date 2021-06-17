@@ -4,6 +4,13 @@
 sudo yum update -y --exclude=kernel
 sudo yum install -y yim git unzip screen
 
+# Fix Repos
+
+cd /etc/yum.repos.d/
+cp CentOS-Base.repo CentOS-Base.repo.old
+sudo cp CentOS-Base.repo CentOS-Base.repo.old
+
+
 #Apache 
 sudo yum install -y httpd httpd-devel httpd-tools
 sudo chkconfig --add httpd
