@@ -28,7 +28,8 @@ mysql -u root -e "SHOW DATABASES";
 # Download Starter Content
 sudo cd /vagrant
 
-sudo -u vagrant wget -q https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/main/files/index.html?token=AS4YMV2AAQ6IFS5KUYDM5D3AZKYHS
-sudo -u vagrant wget -q https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/main/files/info.php?token=AS4YMVZIJ6V5YF6GY7NQX43AZKYJY
+sudo -u vagrant wget -q https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/main/files/index.html
+sudo -u vagrant wget -q https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/main/files/info.php
+
 
 sudo service httpd restart
