@@ -1,15 +1,12 @@
 #!/bin/bash
 
-# Install development dependencies CentOS
+# Install development dependencies CentOS and Fix Repos
+cd /etc/yum.repos.d/
+sudo mv CentOS-Base.repo CentOS-Base.repo.old
+sudo wget -u https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/main/files/CentOS-Base.repo
+sudo yum clean all
 sudo yum update -y --exclude=kernel
 sudo yum install -y yim git unzip screen
-
-# Fix Repos
-
-cd /etc/yum.repos.d/
-cp CentOS-Base.repo CentOS-Base.repo.old
-sudo cp CentOS-Base.repo CentOS-Base.repo.old
-
 
 #Apache 
 sudo yum install -y httpd httpd-devel httpd-tools
@@ -33,10 +30,9 @@ sudo service mysqld start
 mysql -u root -e "SHOW DATABASES";
 
 # Download Starter Content
-sudo cd /vagrant
+cd /vagrant
 
 sudo -u vagrant wget -q https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/main/files/index.html
 sudo -u vagrant wget -q https://raw.githubusercontent.com/devnull-hub/course-vagrant-up-scripts/main/files/info.php
-
 
 sudo service httpd restart
